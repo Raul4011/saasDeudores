@@ -1,0 +1,127 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #1d1d1f;
+  background: #f4f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 8%);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 600;
+}
+
+input,
+button {
+  border-radius: 10px;
+  border: 1px solid #cad0e0;
+  padding: 0.65rem;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  background: #4a67ff;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.debtor-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.debtor-item {
+  border: 1px solid #e3e7f3;
+  border-radius: 12px;
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.debtor-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.payment-form {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.payment-form input {
+  flex: 1;
+}
+
+.delete-btn {
+  background: #ff4a6f;
+  width: fit-content;
+}
+
+.payment-history {
+  margin: 0.5rem 0 0;
+  padding-left: 1rem;
+}
+
+.muted {
+  color: #667085;
+}
+
+@media (max-width: 680px) {
+  .debtor-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payment-form {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de deudores - Tienda de ropa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="card">
+        <h1>Control de deudores</h1>
+        <p>Registra quién te debe, cuánto debe y descuenta pagos fácilmente.</p>
+      </header>
+
+      <section class="card">
+        <h2>Agregar deudor</h2>
+        <form id="debtor-form" class="grid">
+          <label>
+            Nombre de la persona
+            <input id="name" type="text" placeholder="Ej. María López" required />
+          </label>
+          <label>
+            Monto inicial adeudado
+            <input id="amount" type="number" min="0.01" step="0.01" placeholder="Ej. 1500" required />
+          </label>
+          <button type="submit">Guardar deudor</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="list-header">
+          <h2>Deudores</h2>
+          <p id="summary"></p>
+        </div>
+        <div id="debtor-list" class="debtor-list"></div>
+      </section>
+    </main>
+
+    <template id="debtor-template">
+      <article class="debtor-item">
+        <div class="debtor-main">
+          <h3 class="debtor-name"></h3>
+          <p class="debtor-amount"></p>
+        </div>
+        <form class="payment-form">
+          <input class="payment-input" type="number" min="0.01" step="0.01" placeholder="Pago" required />
+          <button type="submit">Registrar pago</button>
+        </form>
+        <button class="delete-btn" type="button">Eliminar</button>
+        <details>
+          <summary>Historial de pagos</summary>
+          <ul class="payment-history"></ul>
+        </details>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
